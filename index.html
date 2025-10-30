@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelle Bispo - Corretora de Imóveis | Aracaju/SE | Compra, Venda e Investimentos</title>
+    <meta name="description" content="Michelle Bispo - Corretora de Imóveis em Aracaju/SE. CRECI 6140. Especializada em compra, venda e investimentos imobiliários. Atendimento personalizado há mais de 10 anos.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+        }
+        
+        :root {
+            --primary: #1a5276;
+            --secondary: #d4af37;
+            --accent: #e74c3c;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --text: #333333;
+            --cream: #fdf6e3;
+            --light-gray: #f5f7fa;
+            --warm-white: #faf9f7;
+            --off-white: #f8f8f8;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--warm-white);
+            overflow-x: hidden;
+        }
+
+        /* ===== LOGO COMO IMAGEM ===== */
+        .logo-image {
+            height: 45px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .logo-image {
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-image {
+                height: 30px;
+            }
+        }
+
+        /* ===== ANIMAÇÕES OTIMIZADAS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== ANIMAÇÃO MORPHING/GRADIENT ===== */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ===== CLASSES DE ANIMAÇÃO OTIMIZADAS ===== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== ESTILOS BASE ===== */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), #f1c40f);
+            color: var(--dark);
+            padding: 14px 25px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .btn-whatsapp:hover {
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            transform: translateY(-3px);
+        }
+
+        /* BOTÃO ESPECIAL COM EFEITO MORPHING/GRADIENT */
+        .btn-whatsapp-special {
+            position: relative;
+            background: linear-gradient(-45deg, #25D366, #128C7E, #1ed760, #34b7f1);
+            background-size: 400% 400%;
+            color: white;
+            border: none;
+            animation: gradientShift 8s ease infinite;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-whatsapp-special:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 15px 35px rgba(37, 211, 102, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            animation-duration: 2s;
+        }
+
+        .btn-whatsapp-special::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            border-radius: 50px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .btn-whatsapp-special:hover::before {
+            opacity: 1;
+        }
+
+        /* BOTÕES PERSONALIZADOS PARA OS CARDS DE SERVIÇOS */
+        .btn-service {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), #2980b9);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(26, 82, 118, 0.3);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .btn-service:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(26, 82, 118, 0.4);
+            background: linear-gradient(135deg, #2980b9, var(--primary));
+        }
+
+        .btn-service::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-service:hover::before {
+            left: 100%;
+        }
+
+        .btn-service-compra {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .btn-service-compra:hover {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+        }
+
+        .btn-service-venda {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-service-venda:hover {
+            background: linear-gradient(135deg, #c0392b, #e74c3c);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+
+        .btn-service-investir {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+        }
+
+        .btn-service-investir:hover {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
+        }
+
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+            padding: 5px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-left: 10px;
+        }
+        
+        .logo-text span {
+            color: var(--secondary);
+        }
+        
+        .creci {
+            font-size: 0.7rem;
+            color: #777;
+            margin-top: 2px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--primary);
+            background: none;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu:hover {
+            color: var(--secondary);
+        }
+
+        /* ===== MENU MOBILE CORRIGIDO ===== */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 12px 0;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
+            .creci {
+                font-size: 0.65rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+                border-top: 3px solid var(--secondary);
+                z-index: 999;
+                max-height: calc(100vh - 70px);
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                display: flex;
+                animation: slideDown 0.3s ease-out;
+            }
+
+            .nav-links li {
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 16px 12px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: var(--dark);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                border-radius: 8px;
+            }
+
+            .nav-links a:hover {
+                background: rgba(26, 82, 118, 0.05);
+                color: var(--primary);
+                transform: translateX(10px);
+            }
+
+            .mobile-menu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background: transparent;
+                border: 2px solid var(--primary);
+                border-radius: 8px;
+                color: var(--primary);
+                font-size: 1.2rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                z-index: 1000;
+            }
+
+            .mobile-menu:hover {
+                background: var(--primary);
+                color: white;
+            }
+
+            .mobile-menu.active {
+                background: var(--primary);
+                color: white;
+                border-color: var(--primary);
+            }
+
+            /* Overlay quando menu está aberto */
+            .menu-overlay {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                backdrop-filter: blur(5px);
+                z-index: 998;
+            }
+
+            .menu-overlay.active {
+                display: block;
+                animation: fadeIn 0.3s ease-out;
+            }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        /* ===== SOBRE ===== */
+        .about {
+            padding: 80px 0;
+            background-color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            text-align: center;
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, var(--primary), #2980b9);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        
+        /* ===== SERVIÇOS ===== */
+        .services {
+            padding: 80px 0;
+            background: var(--off-white);
+            position: relative;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-content h3 {
+            color: var(--primary);
+        }
+
+        .service-content p {
+            flex: 1;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        /* ===== DESTAQUES ===== */
+        .featured {
+            padding: 80px 0;
+            background-color: var(--warm-white);
+            position: relative;
+        }
+        
+        .properties-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .property-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .property-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .property-card:hover .property-image img {
+            transform: scale(1.1);
+        }
+        
+        .property-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, var(--accent), #c0392b);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .property-content {
+            padding: 20px;
+        }
+        
+        .property-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .property-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .property-features {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+        }
+        
+        .property-feature {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        .property-feature i {
+            margin-right: 6px;
+            color: var(--secondary);
+        }
+
+        /* ===== FORMULÁRIO ===== */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(26, 82, 118, 0.9)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .contact-info p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            text-align: center;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .contact-icon {
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 15px;
+            color: var(--text);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            background: rgba(255,255,255,0.8);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.1);
+            background: white;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, var(--dark) 0%, #1e2a3a 100%);
+            color: white;
+            padding: 60px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        .footer-links h3, .footer-contact h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        .footer-links h3:after, .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+            transform: translateX(-50%);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            text-align: center;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            opacity: 0.9;
+            font-size: 0.9rem;
+            justify-content: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary);
+            width: 18px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            opacity: 0.7;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== ANIMAÇÃO DE CARREGAMENTO ===== */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ===== MEDIA QUERIES PARA TELAS MAIORES ===== */
+        @media (min-width: 768px) {
+            .hero {
+                padding: 180px 0 100px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+
+            .about-content h2,
+            .about-content p {
+                text-align: left;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+
+            .properties-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+
+            .contact-info h2,
+            .contact-info p {
+                text-align: left;
+            }
+
+            .footer-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 40px;
+            }
+
+            .footer-logo,
+            .footer-about p,
+            .footer-links h3,
+            .footer-contact h3,
+            .footer-links ul {
+                text-align: left;
+            }
+
+            .footer-links h3:after,
+            .footer-contact h3:after {
+                left: 0;
+                transform: none;
+            }
+
+            .footer-contact p {
+                justify-content: flex-start;
+            }
+
+            .social-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hero {
+                padding: 200px 0 120px;
+            }
+            
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.4rem;
+            }
+
+            .about,
+            .services,
+            .featured,
+            .contact {
+                padding: 100px 0;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* ===== RESPONSIVIDADE ESPECÍFICA PARA CELULARES PEQUENOS ===== */
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+
+            .service-content,
+            .property-content {
+                padding: 20px;
+            }
+
+            .property-features {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .form-control {
+                padding: 12px;
+            }
+        }
+
+        /* ===== CORREÇÕES ESPECÍFICAS ===== */
+        @media (max-width: 768px) {
+            .btn-whatsapp-special:hover {
+                transform: translateY(-2px);
+            }
+
+            .btn-service {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .feature-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Garantir que imagens não ultrapassem containers */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tela de Carregamento -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="/img/logo-michelle.png" alt="Michelle Bispo - Corretora de Imóveis" class="logo-image">
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#featured">Imóveis</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            
+            <button class="mobile-menu" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Encontre o imóvel dos seus sonhos em Aracaju</h1>
+                <p>Há mais de 10 anos conectando pessoas aos melhores imóveis novos e usados de Sergipe</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/557999542667?text=Olá! Gostaria de mais informações sobre imóveis." class="btn btn-whatsapp btn-whatsapp-special" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                    <a href="#featured" class="btn">Ver Imóveis em Destaque</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Sobre a Corretora</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="/img/MIchelle.png" alt="Michelle Bispo - Corretora de Imóveis">
+                </div>
+                <div class="about-content">
+                    <h2>Michelle Bispo</h2>
+                    <p>Corretora de imóveis com CRECI 6140, atuando no mercado imobiliário de Aracaju e região há mais de 10 anos. Especializada na venda de imóveis novos e usados, oferecendo assessoria completa e personalizada para compra, venda e investimentos.</p>
+                    <p>Meu objetivo é transformar o sonho da casa própria em realidade, com transparência, ética e dedicação total aos meus clientes.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div>
+                                <h4>Experiência Comprovada</h4>
+                                <p>Mais de 10 anos no mercado imobiliário</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Atendimento em Aracaju</h4>
+                                <p>Conheço a fundo o mercado imobiliário da cidade</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4>Compromisso com o Cliente</h4>
+                                <p>Atendimento personalizado e transparente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/img/compra.png" alt="Compra de Imóveis">
+                    </div>
+                    <div class="service-content">
+                        <h3>Compra de Imóveis</h3>
+                        <p>Te ajudo a encontrar o imóvel perfeito para você e sua família, com toda assessoria necessária desde a busca até a negociação.</p>
+                        <a href="https://wa.me/557999542667?text=Olá! Gostaria de mais informações sobre COMPRA de imóveis." class="btn-service btn-service-compra" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Quero Comprar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/img/venda.png" alt="Venda de Imóveis">
+                    </div>
+                    <div class="service-content">
+                        <h3>Venda de Imóveis</h3>
+                        <p>Maximize o valor do seu imóvel com nossa assessoria especializada em vendas, desde a precificação até a documentação.</p>
+                        <a href="https://wa.me/557999542667?text=Olá! Gostaria de mais informações sobre VENDA de imóveis." class="btn-service btn-service-venda" target="_blank">
+                            <i class="fas fa-tag"></i> Quero Vender
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/img/investidora.png" alt="Investimentos Imobiliários">
+                    </div>
+                    <div class="service-content">
+                        <h3>Investimentos Imobiliários</h3>
+                        <p>Invista com segurança no mercado imobiliário de Aracaju. Te ajudo a identificar as melhores oportunidades de retorno.</p>
+                        <a href="https://wa.me/557999542667?text=Olá! Gostaria de mais informações sobre INVESTIMENTOS imobiliários." class="btn-service btn-service-investir" target="_blank">
+                            <i class="fas fa-chart-line"></i> Quero Investir
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destaques -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2 class="section-title">Imóveis em Destaque</h2>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Apartamento à venda">
+                        <div class="property-tag">Venda</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">R$ 450.000</div>
+                        <h3 class="property-title">Apartamento 3 Quartos - Jardins</h3>
+                        <p>Excelente apartamento com 3 quartos (sendo 1 suíte), varanda gourmet, 2 vagas de garagem e acabamento de alto padrão.</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed"></i> 3 Quartos
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath"></i> 2 Banheiros
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-car"></i> 2 Vagas
+                            </div>
+                        </div>
+                        <a href="https://wa.me/557999542667?text=Olá! Gostaria de mais informações sobre o apartamento de 3 quartos no Jardins." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Tenho Interesse
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Casa à venda">
+                        <div class="property-tag">Venda</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">R$ 680.000</div>
+                        <h3 class="property-title">Casa 4 Quartos - Atalaia</h3>
+                        <p>Linda casa com 4 quartos (2 suítes), ampla área de lazer com piscina, churrasqueira e excelente localização próxima à praia.</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed"></i> 4 Quartos
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath"></i> 3 Banheiros
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-car"></i> 3 Vagas
+                            </div>
+                        </div>
+                        <a href="https://wa.me/557999542667?text=Olá! Gostaria de mais informações sobre a casa de 4 quartos na Atalaia." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Tenho Interesse
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Apartamento para alugar">
+                        <div class="property-tag">Aluguel</div>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">R$ 1.800/mês</div>
+                        <h3 class="property-title">Apartamento 2 Quartos - Centro</h3>
+                        <p>Confortável apartamento com 2 quartos, bem localizado no centro de Aracaju, próximo a comércio, bancos e serviços.</p>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <i class="fas fa-bed"></i> 2 Quartos
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-bath"></i> 1 Banheiro
+                            </div>
+                            <div class="property-feature">
+                                <i class="fas fa-car"></i> 1 Vaga
+                            </div>
+                        </div>
+                        <a href="https://wa.me/557999542667?text=Olá! Gostaria de mais informações sobre o apartamento de 2 quartos no Centro." class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Tenho Interesse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Entre em Contato</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Vamos conversar sobre o seu imóvel?</h2>
+                    <p>Estou à disposição para ajudar você a encontrar o imóvel perfeito ou para assessorar na venda do seu patrimônio. Entre em contato por qualquer um dos canais abaixo:</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Telefone/WhatsApp</h4>
+                                <p>(79) 9 9954-2667</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p>contato@michellebispoimoveis.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Aracaju - SE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone/WhatsApp</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interesse</label>
+                            <select id="interest" class="form-control" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="comprar">Comprar imóvel</option>
+                                <option value="vender">Vender imóvel</option>
+                                <option value="alugar">Alugar imóvel</option>
+                                <option value="avaliar">Avaliar imóvel</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Conte-nos como podemos ajudar..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Michelle<span>Bispo</span></div>
+                    <p>Corretora de imóveis com mais de 10 anos de experiência no mercado de Aracaju/SE, especializada em imóveis novos e usados.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/michellebispoimoveis/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/557999542667" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <!-- Facebook removido conforme solicitado -->
+                        <!-- LinkedIn removido conforme solicitado -->
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#featured">Imóveis em Destaque</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-phone-alt"></i> (79) 9 9954-2667</p>
+                    <p><i class="fas fa-envelope"></i> contato@michellebispoimoveis.com.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Aracaju - SE</p>
+                    <p><i class="fas fa-id-card"></i> CRECI: 6140</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Michelle Bispo - Corretora de Imóveis. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // CÓDIGO JAVASCRIPT CORRIGIDO E OTIMIZADO
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const menuOverlay = document.createElement('div');
+            
+            // Criar overlay
+            menuOverlay.className = 'menu-overlay';
+            document.body.appendChild(menuOverlay);
+
+            // Função para abrir/fechar menu
+            function toggleMenu() {
+                const isActive = navLinks.classList.contains('active');
+                
+                if (isActive) {
+                    // Fechar menu
+                    navLinks.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    menuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                    
+                    // Mudar ícone para hamburguer
+                    const icon = mobileMenu.querySelector('i');
+                    icon.className = 'fas fa-bars';
+                } else {
+                    // Abrir menu
+                    navLinks.classList.add('active');
+                    mobileMenu.classList.add('active');
+                    menuOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Mudar ícone para X
+                    const icon = mobileMenu.querySelector('i');
+                    icon.className = 'fas fa-times';
+                }
+            }
+
+            // Evento de clique no botão do menu
+            mobileMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
+                toggleMenu();
+            });
+
+            // Fechar menu ao clicar no overlay
+            menuOverlay.addEventListener('click', function() {
+                toggleMenu();
+            });
+
+            // Fechar menu ao clicar em um link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Fechar menu ao pressionar ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+
+            // Tela de carregamento
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const loadingScreen = document.getElementById('loadingScreen');
+                    if (loadingScreen) {
+                        loadingScreen.style.opacity = '0';
+                        setTimeout(() => {
+                            loadingScreen.style.display = 'none';
+                        }, 500);
+                    }
+                }, 800);
+            });
+
+            // Controle do header no scroll (simplificado)
+            const header = document.getElementById('mainHeader');
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+            
+            function updateHeader() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                if (window.scrollY > lastScrollY && window.scrollY > 200) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+                
+                lastScrollY = window.scrollY;
+                ticking = false;
+            }
+            
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(updateHeader);
+                        ticking = true;
+                    }
+                });
+            }
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('.btn');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Mensagem Enviada!';
+                    submitBtn.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
+                    submitBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                        this.reset();
+                    }, 3000);
+                });
+            }
+            
+            // Scroll suave otimizado
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        e.preventDefault();
+                        
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Animação de elementos quando entram na viewport (otimizada)
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos para animação
+            document.querySelectorAll('.service-card, .property-card, .feature-item, .contact-item').forEach(el => {
+                el.classList.add('animate-on-scroll');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
